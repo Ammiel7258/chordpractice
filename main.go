@@ -9,11 +9,9 @@ import (
 	"time"
 
 	"chordpractice/chords"
+	"chordpractice/ui"
 
-	"fyne.io/fyne/v2"
 	"fyne.io/fyne/v2/app"
-	"fyne.io/fyne/v2/container"
-	"fyne.io/fyne/v2/widget"
 )
 
 var unusedChords []string
@@ -21,19 +19,16 @@ var usedChords []string
 var bpm int
 
 func main() {
-	a := app.New()
-	w := a.NewWindow("Hello")
 
-	w.SetContent(container.NewVBox(
-		widget.NewLabel("Hello from WSL!"),
-	))
+	chordPracticeApp := app.New()
 
-	w.Resize(fyne.NewSize(300, 200))
-	w.ShowAndRun()
-}
+	backgroundWindow := chordPracticeApp.NewWindow("Guitar Chord Practice App")
 
-func draw() {
+	content := ui.LoadHomeWindow(backgroundWindow)
 
+	backgroundWindow.SetContent(content)
+
+  backgroundWindow.ShowAndRun()
 }
 
 func menu() {
