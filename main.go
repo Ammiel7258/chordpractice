@@ -24,7 +24,8 @@ func main() {
 
 	backgroundWindow := chordPracticeApp.NewWindow("Guitar Chord Practice App")
 
-	content := ui.LoadHomeWindow(backgroundWindow)
+	//content := ui.LoadHomeWindow(backgroundWindow)
+  content := ui.GetHomeContent(backgroundWindow)
 
 	backgroundWindow.SetContent(content)
 

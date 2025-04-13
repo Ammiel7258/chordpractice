@@ -22,18 +22,18 @@ func LoadHomeWindow(window fyne.Window) fyne.CanvasObject {
 
 func GetHomeContent(window fyne.Window) fyne.CanvasObject {
 
-  bpmSelector := drawBPMSelector(3)
+  bpmSelector := drawBPMSelector()
 
   return container.NewVBox(bpmSelector)
 }
 
-func drawBPMSelector(bpm int) fyne.CanvasObject {
+func drawBPMSelector() fyne.CanvasObject {
   label := widget.NewLabel("BPM:")
   entry := widget.NewEntry()
   entry.SetPlaceHolder("What BPM would you like to practice with?")
 
   button := widget.NewButton("Continue", func() {
-
+    handlers.HandleSubmit(entry, label)
   })
 
   return container.NewHBox(label, entry, button)
