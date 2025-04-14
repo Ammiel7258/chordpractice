@@ -19,7 +19,12 @@ var usedChords []string
 var bpm int
 
 func main() {
+  //gui()
+  menu()
+  
+}
 
+func gui() {
 	chordPracticeApp := app.New()
 
 	backgroundWindow := chordPracticeApp.NewWindow("Guitar Chord Practice App")

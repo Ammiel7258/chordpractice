@@ -11,3 +11,7 @@ var UsedChords = []string{
 	"Dm",
 	"Em",
 }
+
+func ChordBox(chord string) {
+
+}

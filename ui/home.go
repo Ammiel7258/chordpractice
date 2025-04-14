@@ -21,7 +21,6 @@ func LoadHomeWindow(window fyne.Window) fyne.CanvasObject {
 }
 
 func GetHomeContent(window fyne.Window) fyne.CanvasObject {
-
   bpmSelector := drawBPMSelector()
 
   return container.NewVBox(bpmSelector)
